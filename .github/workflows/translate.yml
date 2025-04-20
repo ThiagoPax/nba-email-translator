@@ -1,7 +1,15 @@
 name: Traduzir NBA
 
-# dispara a cada 5 minutos
 on:
+  # dispara sempre que você der push em main
+  push:
+    branches:
+      - main
+
+  # permite clicar em “Run workflow” na aba Actions
+  workflow_dispatch:
+
+  # continua disparando a cada 5 minutos
   schedule:
     - cron: '*/5 * * * *'
 
